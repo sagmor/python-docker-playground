@@ -1,6 +1,6 @@
 from flask import Flask
 import json
-from service.docker import containers, Container
+from service.docker import containers, Container, NotFound
 
 app = Flask(__name__)
 
@@ -29,7 +29,10 @@ def stop(id):
 
 @app.errorhandler(500)
 def internal_error(error):
-    return json.dumps({'Error': str(error)}), 500
+    if type(error) is NotFound:
+        return json.dumps({'error': str(error)}), 404
+    else:
+        return json.dumps({'error': str(error)}), 500
 
 
 def run():

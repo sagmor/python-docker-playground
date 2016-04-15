@@ -1,6 +1,7 @@
 import docker
 from service.formatter import formatter
 
+NotFound = docker.errors.NotFound
 client = docker.from_env(assert_hostname=False)
 
 
