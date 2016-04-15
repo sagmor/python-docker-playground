@@ -28,7 +28,12 @@ And you'll get something like
 	{
 		"id": "4391ad187af1",
 		"name": "dreamy_knuth",
-		"state": "running"
+		"state": "running",
+		"_links": {
+			"self": {"href": "/containers/4391ad187af1"},
+			"start": {"href": "/containers/4391ad187af1/start", "method": "POST"},
+			"stop": {"href": "/containers/4391ad187af1/stop", "method": "POST"}
+		}
 	}
 ]
 ```
@@ -43,7 +48,12 @@ curl http://127.0.0.1:5000/containers/4391ad187af1
 {
 	"id": "4391ad187af1",
 	"name": "dreamy_knuth",
-	"state": "running"
+	"state": "running",
+	"_links": {
+		"self": {"href": "/containers/4391ad187af1"},
+		"start": {"href": "/containers/4391ad187af1/start", "method": "POST"},
+		"stop": {"href": "/containers/4391ad187af1/stop", "method": "POST"}
+	}
 }
 ```
 
