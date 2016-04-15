@@ -28,13 +28,12 @@ And you'll get something like
 	{
 		"Status": "Up 10 minutes",
 		"Id": "4391ad187af1851641d0a48583c6d1166e8e79279a4bad319883dfa3c3f06a15",
-		"Names": ["/dreamy_knuth"],
 		"Image": "ubuntu"
 	}
 ]
 ```
 
-### GET /containers/id_or_name
+### GET /containers/id
 Return aditional information about a specific container
 ```bash
 curl http://127.0.0.1:5000/containers/4391ad187af1
@@ -59,7 +58,7 @@ curl http://127.0.0.1:5000/containers/4391ad187af1
 }
 ```
 
-### POST /containers/id_or_name/start
+### POST /containers/id/start
 Starts the container
 ```bash
 curl -i --data "" http://127.0.0.1:5000/containers/4391ad187af1/start
@@ -74,7 +73,7 @@ Date: Fri, 15 Apr 2016 02:32:45 GMT
 
 ```
 
-### POST /containers/id_or_name/stop
+### POST /containers/id/stop
 Stops the container
 
 ```bash
