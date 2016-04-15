@@ -1,6 +1,7 @@
 import unittest
 from service.formatter import formatter
 
+
 class ServiceFormatterTestCase(unittest.TestCase):
     def test_formating_from_list(self):
         original = {
@@ -14,8 +15,7 @@ class ServiceFormatterTestCase(unittest.TestCase):
                 'state': 'running'
                 }
 
-        self.assertEqual(formatter(original), expected,
-                "wrong result after format")
+        self.assertEqual(formatter(original), expected, "wrong result after format")
 
     def test_formating_from_inspect(self):
         original = {
@@ -29,6 +29,4 @@ class ServiceFormatterTestCase(unittest.TestCase):
                 'state': 'running'
                 }
 
-        self.assertEqual(formatter(original), expected,
-                "wrong result after format")
-
+        self.assertEqual(formatter(original), expected, "wrong result after format")
