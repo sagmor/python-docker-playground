@@ -33,7 +33,7 @@ And you'll get something like
 ]
 ```
 
-### GET /containers/id
+### GET /containers/\<id\>
 Return aditional information about a specific container
 ```bash
 curl http://127.0.0.1:5000/containers/4391ad187af1
@@ -58,7 +58,7 @@ curl http://127.0.0.1:5000/containers/4391ad187af1
 }
 ```
 
-### POST /containers/id/start
+### POST /containers/\<id\>/start
 Starts the container
 ```bash
 curl -i --data "" http://127.0.0.1:5000/containers/4391ad187af1/start
@@ -73,7 +73,7 @@ Date: Fri, 15 Apr 2016 02:32:45 GMT
 
 ```
 
-### POST /containers/id/stop
+### POST /containers/\<id\>/stop
 Stops the container
 
 ```bash
