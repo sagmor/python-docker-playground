@@ -24,7 +24,14 @@ curl http://127.0.0.1:5000/containers
 
 And you'll get something like
 ```json
-[{"Status": "Up 10 minutes", "Id": "4391ad187af1851641d0a48583c6d1166e8e79279a4bad319883dfa3c3f06a15", "Names": ["/dreamy_knuth"], "Image": "ubuntu"}]
+[
+	{
+		"Status": "Up 10 minutes",
+		"Id": "4391ad187af1851641d0a48583c6d1166e8e79279a4bad319883dfa3c3f06a15",
+		"Names": ["/dreamy_knuth"],
+		"Image": "ubuntu"
+	}
+]
 ```
 
 ### GET /containers/id_or_name
@@ -34,7 +41,22 @@ curl http://127.0.0.1:5000/containers/4391ad187af1
 ```
 
 ```json
-{"State": {"Error": "", "ExitCode": 0, "Status": "running", "OOMKilled": false, "FinishedAt": "2016-04-15T02:17:40.281574062Z", "StartedAt": "2016-04-15T02:17:50.333913649Z", "Running": true, "Paused": false, "Pid": 5215, "Dead": false, "Restarting": false}, "Id": "4391ad187af1851641d0a48583c6d1166e8e79279a4bad319883dfa3c3f06a15"}
+{
+	"Id": "4391ad187af1851641d0a48583c6d1166e8e79279a4bad319883dfa3c3f06a15",
+	"State": {
+		"Error": "",
+		"ExitCode": 0,
+		"Status": "running",
+		"OOMKilled": false,
+		"FinishedAt": "2016-04-15T02:17:40.281574062Z",
+		"StartedAt": "2016-04-15T02:17:50.333913649Z",
+		"Running": true,
+		"Paused": false,
+		"Pid": 5215,
+		"Dead": false,
+		"Restarting": false
+	}
+}
 ```
 
 ### POST /containers/id_or_name/start
